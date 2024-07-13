@@ -19,3 +19,19 @@ Create - Post
 Read - Get
 Update - Patch/Put
 Delete - Delete
+
+
+----------
+Middleware Functions
+
+Middleware is a set of functions between the HTTP Request and API Response
+- Add Preliminary Request Processing
+- Add Additional Functionality for the API
+
+HTTP Request -> Middleware Functions -> API Response
+
+3 Types of Middleware:
+- Built-in
+- Custom
+- 3rd Party
+
