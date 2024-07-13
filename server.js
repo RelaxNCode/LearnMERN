@@ -2,8 +2,15 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3500
 const path = require('path') // path refers to url pathh
+// Custom Middlewares
+const { logger } = require('./middleware/logger')
 
-app.use('/', express.static(path.join(__dirname, '/public')))
+app.use(logger)
+
+app.use(express.json()) // Functionality to process json
+
+// Using Built-in middleware: express
+app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.use('/', require('./routes/root'))
 
